@@ -1,0 +1,35 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <OutputType>Library</OutputType>
+    <IsPackable>true</IsPackable>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <Nullable>enable</Nullable>
+    <Title>Domain Error Types for Clean Architecture with FluentResults</Title>
+    <Description>Provides common domain error types (NotFound, Conflict, Validation, Unauthorized, Forbidden) for DDD and Clean Architecture projects using FluentResults. Lightweight package with no ASP.NET dependencies - perfect for your domain layer.</Description>
+    <Authors>Ivan Perez</Authors>
+    <Version>1.0.0</Version>
+    <!-- INFORMACIÓN DEL REPOSITORIO -->
+    <RepositoryUrl>https://github.com/Ivanproyectos/packages-nuget.git</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <!-- INFORMACIÓN DEL PAQUETE -->
+    <Authors>Ivan Perez</Authors>
+    <Copyright>Copyright © 2024 Ivan Perez</Copyright>
+    <PackageTags>aspnetcore;middleware;validation;fluentvalidation;interceptor</PackageTags>
+    <PackageProjectUrl>https://github.com/Ivanproyectos/packages-nuget.git</PackageProjectUrl>
+    <!-- LICENCIA -->
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageReleaseNotes>
+		- Classes for common domain error types using FluentResults
+	</PackageReleaseNotes>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="README.md" Pack="true" PackagePath="\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="FluentResults" Version="4.0.0" />
+  </ItemGroup>
+</Project>

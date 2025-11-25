@@ -1,0 +1,10 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="ApiFluentResults.AspNetCore/ApiFluentResults.AspNetCore.csproj" />
+    <Project Path="ApiFluentResults.Domain/ApiFluentResults.Domain.csproj" />
+  </Folder>
+  <Folder Name="/test/">
+    <Project Path="ApiFluentResult.Services/ApiFluentResult.Services.csproj" />
+    <Project Path="ApiFluentResult/ApiFluentResult.csproj" />
+  </Folder>
+</Solution>

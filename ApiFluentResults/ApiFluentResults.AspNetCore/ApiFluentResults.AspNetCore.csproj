@@ -1,0 +1,45 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <OutputType>Library</OutputType>
+    <IsPackable>true</IsPackable>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <Nullable>enable</Nullable>
+    <Title>Fluent Result from FluentResults for ASP.NET Core</Title>
+    <Description>
+		Map responses in the controller receiving the Resolvet type from FluentResults in ASP.NET Core
+	</Description>
+    <Authors>Ivan Perez</Authors>
+    <Version>1.0.0</Version>
+    <!-- INFORMACIÓN DEL REPOSITORIO -->
+    <RepositoryUrl>https://github.com/Ivanproyectos/packages-nuget.git</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <!-- INFORMACIÓN DEL PAQUETE -->
+    <Authors>Ivan Perez</Authors>
+    <Copyright>Copyright © 2024 Ivan Perez</Copyright>
+    <PackageTags>aspnetcore;responses;mappings;mapErrors;fluentResults</PackageTags>
+    <PackageProjectUrl>https://github.com/Ivanproyectos/packages-nuget.git</PackageProjectUrl>
+    <!-- LICENCIA -->
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageReleaseNotes>
+		- Mapping responses according to generic error types
+		- Mapping responses with typed errors
+	</PackageReleaseNotes>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="README.md" Pack="true" PackagePath="\" />
+    <!--<None Include="LICENSE.txt" Pack="true" PackagePath="\" /> -->
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="FluentResults" Version="4.0.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <FrameworkReference Include="Microsoft.AspNetCore.App" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ApiFluentResults.Domain\ApiFluentResults.Domain.csproj" />
+  </ItemGroup>
+</Project>
