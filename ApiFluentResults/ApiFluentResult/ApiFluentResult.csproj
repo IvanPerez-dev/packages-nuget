@@ -5,11 +5,11 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
   <ItemGroup>
+    <PackageReference Include="ApiFluentResults.AspNetCore" Version="1.0.1" />
     <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="10.0.0" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="10.0.1" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ApiFluentResult.Services\ApiFluentResult.Services.csproj" />
-    <ProjectReference Include="..\ApiFluentResults.AspNetCore\ApiFluentResults.AspNetCore.csproj" />
   </ItemGroup>
 </Project>

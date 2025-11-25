@@ -1,10 +1,18 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\ISP2\\Documents\\Mis archivos\\Mis proyectos\\packages-nuget\\ApiFluentResults\\",
+  "WorkspaceRootPath": "C:\\Users\\USUARIO\\Documents\\GitHub\\packages-nuget\\ApiFluentResults\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C5D5D7B8-8D89-4A01-8591-E03EEE244BC2}|ApiFluentResults.Domain\\ApiFluentResults.Domain.csproj|c:\\users\\isp2\\documents\\mis archivos\\mis proyectos\\packages-nuget\\apifluentresults\\apifluentresults.domain\\apifluentresults.domain.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{C5D5D7B8-8D89-4A01-8591-E03EEE244BC2}|ApiFluentResults.Domain\\ApiFluentResults.Domain.csproj|solutionrelative:apifluentresults.domain\\apifluentresults.domain.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{D24B39A3-14A9-ED46-3CDD-683C1DC5EE13}|ApiFluentResults.Domain\\ApiFluentResults.Domain.csproj|c:\\users\\usuario\\documents\\github\\packages-nuget\\apifluentresults\\apifluentresults.domain\\apifluentresults.domain.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{D24B39A3-14A9-ED46-3CDD-683C1DC5EE13}|ApiFluentResults.Domain\\ApiFluentResults.Domain.csproj|solutionrelative:apifluentresults.domain\\apifluentresults.domain.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3AD9B0B3-8B74-478B-EB04-00EF94B1639A}|ApiFluentResults.AspNetCore\\ApiFluentResults.AspNetCore.csproj|c:\\users\\usuario\\documents\\github\\packages-nuget\\apifluentresults\\apifluentresults.aspnetcore\\apifluentresults.aspnetcore.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{3AD9B0B3-8B74-478B-EB04-00EF94B1639A}|ApiFluentResults.AspNetCore\\ApiFluentResults.AspNetCore.csproj|solutionrelative:apifluentresults.aspnetcore\\apifluentresults.aspnetcore.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{78DB6EE8-DC5C-CEEE-24D8-E8563246584C}|ApiFluentResult\\ApiFluentResult.csproj|c:\\users\\usuario\\documents\\github\\packages-nuget\\apifluentresults\\apifluentresult\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{78DB6EE8-DC5C-CEEE-24D8-E8563246584C}|ApiFluentResult\\ApiFluentResult.csproj|solutionrelative:apifluentresult\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,24 +22,46 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ApiFluentResults.AspNetCore",
+              "DocumentMoniker": "C:\\Users\\USUARIO\\Documents\\GitHub\\packages-nuget\\ApiFluentResults\\ApiFluentResults.AspNetCore\\ApiFluentResults.AspNetCore.csproj",
+              "RelativeDocumentMoniker": "ApiFluentResults.AspNetCore\\ApiFluentResults.AspNetCore.csproj",
+              "ToolTip": "C:\\Users\\USUARIO\\Documents\\GitHub\\packages-nuget\\ApiFluentResults\\ApiFluentResults.AspNetCore\\ApiFluentResults.AspNetCore.csproj",
+              "RelativeToolTip": "ApiFluentResults.AspNetCore\\ApiFluentResults.AspNetCore.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-11-25T03:08:55.835Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "ApiFluentResults.Domain",
-              "DocumentMoniker": "C:\\Users\\ISP2\\Documents\\Mis archivos\\Mis proyectos\\packages-nuget\\ApiFluentResults\\ApiFluentResults.Domain\\ApiFluentResults.Domain.csproj",
+              "DocumentMoniker": "C:\\Users\\USUARIO\\Documents\\GitHub\\packages-nuget\\ApiFluentResults\\ApiFluentResults.Domain\\ApiFluentResults.Domain.csproj",
               "RelativeDocumentMoniker": "ApiFluentResults.Domain\\ApiFluentResults.Domain.csproj",
-              "ToolTip": "C:\\Users\\ISP2\\Documents\\Mis archivos\\Mis proyectos\\packages-nuget\\ApiFluentResults\\ApiFluentResults.Domain\\ApiFluentResults.Domain.csproj",
+              "ToolTip": "C:\\Users\\USUARIO\\Documents\\GitHub\\packages-nuget\\ApiFluentResults\\ApiFluentResults.Domain\\ApiFluentResults.Domain.csproj",
               "RelativeToolTip": "ApiFluentResults.Domain\\ApiFluentResults.Domain.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAA5AAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-11-24T21:16:07.856Z",
+              "WhenOpened": "2025-11-25T03:08:55.348Z",
               "EditorCaption": ""
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "UsersController.cs",
+              "DocumentMoniker": "C:\\Users\\USUARIO\\Documents\\GitHub\\packages-nuget\\ApiFluentResults\\ApiFluentResult\\Controllers\\UsersController.cs",
+              "RelativeDocumentMoniker": "ApiFluentResult\\Controllers\\UsersController.cs",
+              "ToolTip": "C:\\Users\\USUARIO\\Documents\\GitHub\\packages-nuget\\ApiFluentResults\\ApiFluentResult\\Controllers\\UsersController.cs",
+              "RelativeToolTip": "ApiFluentResult\\Controllers\\UsersController.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAgwCcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-25T02:35:37.377Z",
+              "EditorCaption": ""
             }
           ]
         }
