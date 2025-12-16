@@ -7,18 +7,18 @@
     <Title>Excel Fluent - Easy Excel Export/Import</Title>
     <Version>1.0.0</Version>
     <!-- INFORMACIÓN DEL REPOSITORIO -->
-    <RepositoryUrl>https://github.com/Ivanproyectos/packages-nuget.git</RepositoryUrl>
+    <RepositoryUrl>https://github.com/IvanPerez-dev/packages-nuget.git</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <!-- INFORMACIÓN DEL PAQUETE -->
     <Authors>Ivan Perez</Authors>
-    <Description>Easy-to-use fluent library for Excel export and import operations. Simple data transfer from DTOs/models with intuitive fluent syntax and customizable configurations.</Description>
+    <Description>A fluent Excel library for clean data import and export. Simplifies transferring DTO/model data with intuitive syntax and advanced customization options.</Description>
     <Copyright>Copyright © 2025 Ivan Perez</Copyright>
     <PackageTags>excel, export, import, closedxml, fluent, configuration, model, spreadsheet, data</PackageTags>
-    <PackageProjectUrl>https://github.com/Ivanproyectos/packages-nuget.git</PackageProjectUrl>
+    <PackageProjectUrl>https://github.com/IvanPerez-dev/packages-nuget.gitt</PackageProjectUrl>
     <!-- LICENCIA -->
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageReadmeFile>README.md</PackageReadmeFile>
-    <PackageReleaseNotes>First release: Fluent Excel export with configurable styles, import with column mapping, date format handling, and error management.</PackageReleaseNotes>
+    <PackageReleaseNotes>First release: Fluent Excel export with configurable styles, import with column mapping, date format handling.</PackageReleaseNotes>
   </PropertyGroup>
   <ItemGroup>
     <None Include="README.md" Pack="true" PackagePath="\" />

@@ -34,11 +34,9 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="FluentResults" Version="4.0.0" />
+    <PackageReference Include="ApiFluentResults.Domain" Version="1.0.0" />
   </ItemGroup>
   <ItemGroup>
     <FrameworkReference Include="Microsoft.AspNetCore.App" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\ApiFluentResults.Domain\ApiFluentResults.Domain.csproj" />
   </ItemGroup>
 </Project>
