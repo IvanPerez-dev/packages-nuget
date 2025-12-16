@@ -12,7 +12,7 @@
 		Map responses in the controller receiving the Resolvet type from FluentResults in ASP.NET Core
 	</Description>
     <Authors>Ivan Perez</Authors>
-    <Version>1.0.0</Version>
+    <Version>1.1.0</Version>
     <!-- INFORMACIÓN DEL REPOSITORIO -->
     <RepositoryUrl>https://github.com/Ivanproyectos/packages-nuget.git</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
@@ -25,8 +25,7 @@
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageReleaseNotes>
-		- Mapping responses according to generic error types
-		- Mapping responses with typed errors
+		- Metadata values ​​were removed when the error was due to field validation.
 	</PackageReleaseNotes>
   </PropertyGroup>
   <ItemGroup>

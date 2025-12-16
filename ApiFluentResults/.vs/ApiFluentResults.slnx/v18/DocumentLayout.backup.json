@@ -3,28 +3,44 @@
   "WorkspaceRootPath": "C:\\Users\\ISP2\\Documents\\Mis archivos\\Mis proyectos\\packages-nuget\\ApiFluentResults\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{83370A0E-E733-4CC5-AD42-B8A05D570FAB}|ApiFluentResult\\ApiFluentResult.csproj|c:\\users\\isp2\\documents\\mis archivos\\mis proyectos\\packages-nuget\\apifluentresults\\apifluentresult\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{83370A0E-E733-4CC5-AD42-B8A05D570FAB}|ApiFluentResult\\ApiFluentResult.csproj|solutionrelative:apifluentresult\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3AD9B0B3-8B74-478B-EB04-00EF94B1639A}|ApiFluentResults.AspNetCore\\ApiFluentResults.AspNetCore.csproj|c:\\users\\isp2\\documents\\mis archivos\\mis proyectos\\packages-nuget\\apifluentresults\\apifluentresults.aspnetcore\\apifluentresults.aspnetcore.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{3AD9B0B3-8B74-478B-EB04-00EF94B1639A}|ApiFluentResults.AspNetCore\\ApiFluentResults.AspNetCore.csproj|solutionrelative:apifluentresults.aspnetcore\\apifluentresults.aspnetcore.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{83370A0E-E733-4CC5-AD42-B8A05D570FAB}|ApiFluentResult\\ApiFluentResult.csproj|c:\\users\\isp2\\documents\\mis archivos\\mis proyectos\\packages-nuget\\apifluentresults\\apifluentresult\\apifluentresult.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{83370A0E-E733-4CC5-AD42-B8A05D570FAB}|ApiFluentResult\\ApiFluentResult.csproj|solutionrelative:apifluentresult\\apifluentresult.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{3AD9B0B3-8B74-478B-EB04-00EF94B1639A}|ApiFluentResults.AspNetCore\\ApiFluentResults.AspNetCore.csproj|c:\\users\\isp2\\documents\\mis archivos\\mis proyectos\\packages-nuget\\apifluentresults\\apifluentresults.aspnetcore\\extensions\\resultmapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3AD9B0B3-8B74-478B-EB04-00EF94B1639A}|ApiFluentResults.AspNetCore\\ApiFluentResults.AspNetCore.csproj|solutionrelative:apifluentresults.aspnetcore\\extensions\\resultmapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C5D5D7B8-8D89-4A01-8591-E03EEE244BC2}|ApiFluentResults.Domain\\ApiFluentResults.Domain.csproj|c:\\users\\isp2\\documents\\mis archivos\\mis proyectos\\packages-nuget\\apifluentresults\\apifluentresults.domain\\apifluentresults.domain.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{C5D5D7B8-8D89-4A01-8591-E03EEE244BC2}|ApiFluentResults.Domain\\ApiFluentResults.Domain.csproj|solutionrelative:apifluentresults.domain\\apifluentresults.domain.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{D24B39A3-14A9-ED46-3CDD-683C1DC5EE13}|ApiFluentResults.Domain\\ApiFluentResults.Domain.csproj|c:\\users\\isp2\\documents\\mis archivos\\mis proyectos\\packages-nuget\\apifluentresults\\apifluentresults.domain\\errors\\domainerror.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D24B39A3-14A9-ED46-3CDD-683C1DC5EE13}|ApiFluentResults.Domain\\ApiFluentResults.Domain.csproj|solutionrelative:apifluentresults.domain\\errors\\domainerror.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C5D5D7B8-8D89-4A01-8591-E03EEE244BC2}|ApiFluentResults.Domain\\ApiFluentResults.Domain.csproj|c:\\users\\isp2\\documents\\mis archivos\\mis proyectos\\packages-nuget\\apifluentresults\\apifluentresults.domain\\dtos\\customproblemdetails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C5D5D7B8-8D89-4A01-8591-E03EEE244BC2}|ApiFluentResults.Domain\\ApiFluentResults.Domain.csproj|solutionrelative:apifluentresults.domain\\dtos\\customproblemdetails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D24B39A3-14A9-ED46-3CDD-683C1DC5EE13}|ApiFluentResults.Domain\\ApiFluentResults.Domain.csproj|c:\\users\\isp2\\documents\\mis archivos\\mis proyectos\\packages-nuget\\apifluentresults\\apifluentresults.domain\\errors\\forbiddenerror.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D24B39A3-14A9-ED46-3CDD-683C1DC5EE13}|ApiFluentResults.Domain\\ApiFluentResults.Domain.csproj|solutionrelative:apifluentresults.domain\\errors\\forbiddenerror.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{954F0CBE-B0B9-41A2-BB4E-A01F418A6B57}|ApiFluentResult.Services\\ApiFluentResult.Services.csproj|c:\\users\\isp2\\documents\\mis archivos\\mis proyectos\\packages-nuget\\apifluentresults\\apifluentresult.services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{954F0CBE-B0B9-41A2-BB4E-A01F418A6B57}|ApiFluentResult.Services\\ApiFluentResult.Services.csproj|solutionrelative:apifluentresult.services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{78DB6EE8-DC5C-CEEE-24D8-E8563246584C}|ApiFluentResult\\ApiFluentResult.csproj|c:\\users\\isp2\\documents\\mis archivos\\mis proyectos\\packages-nuget\\apifluentresults\\apifluentresult\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{78DB6EE8-DC5C-CEEE-24D8-E8563246584C}|ApiFluentResult\\ApiFluentResult.csproj|solutionrelative:apifluentresult\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{954F0CBE-B0B9-41A2-BB4E-A01F418A6B57}|ApiFluentResult.Services\\ApiFluentResult.Services.csproj|c:\\users\\isp2\\documents\\mis archivos\\mis proyectos\\packages-nuget\\apifluentresults\\apifluentresult.services\\useremailalreadyexistserror.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{954F0CBE-B0B9-41A2-BB4E-A01F418A6B57}|ApiFluentResult.Services\\ApiFluentResult.Services.csproj|solutionrelative:apifluentresult.services\\useremailalreadyexistserror.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{371781A9-C63C-6D3D-56C5-A9A5F3767D67}|ApiFluentResult.Services\\ApiFluentResult.Services.csproj|c:\\users\\isp2\\documents\\mis archivos\\mis proyectos\\packages-nuget\\apifluentresults\\apifluentresult.services\\dependencycontainer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{371781A9-C63C-6D3D-56C5-A9A5F3767D67}|ApiFluentResult.Services\\ApiFluentResult.Services.csproj|solutionrelative:apifluentresult.services\\dependencycontainer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{371781A9-C63C-6D3D-56C5-A9A5F3767D67}|ApiFluentResult.Services\\ApiFluentResult.Services.csproj|c:\\users\\isp2\\documents\\mis archivos\\mis proyectos\\packages-nuget\\apifluentresults\\apifluentresult.services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{371781A9-C63C-6D3D-56C5-A9A5F3767D67}|ApiFluentResult.Services\\ApiFluentResult.Services.csproj|solutionrelative:apifluentresult.services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D24B39A3-14A9-ED46-3CDD-683C1DC5EE13}|ApiFluentResults.Domain\\ApiFluentResults.Domain.csproj|c:\\users\\isp2\\documents\\mis archivos\\mis proyectos\\packages-nuget\\apifluentresults\\apifluentresults.domain\\errors\\conflicterror.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D24B39A3-14A9-ED46-3CDD-683C1DC5EE13}|ApiFluentResults.Domain\\ApiFluentResults.Domain.csproj|solutionrelative:apifluentresults.domain\\errors\\conflicterror.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D24B39A3-14A9-ED46-3CDD-683C1DC5EE13}|ApiFluentResults.Domain\\ApiFluentResults.Domain.csproj|c:\\users\\isp2\\documents\\mis archivos\\mis proyectos\\packages-nuget\\apifluentresults\\apifluentresults.domain\\dtos\\customproblemdetails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D24B39A3-14A9-ED46-3CDD-683C1DC5EE13}|ApiFluentResults.Domain\\ApiFluentResults.Domain.csproj|solutionrelative:apifluentresults.domain\\dtos\\customproblemdetails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D24B39A3-14A9-ED46-3CDD-683C1DC5EE13}|ApiFluentResults.Domain\\ApiFluentResults.Domain.csproj|c:\\users\\isp2\\documents\\mis archivos\\mis proyectos\\packages-nuget\\apifluentresults\\apifluentresults.domain\\apifluentresults.domain.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{D24B39A3-14A9-ED46-3CDD-683C1DC5EE13}|ApiFluentResults.Domain\\ApiFluentResults.Domain.csproj|solutionrelative:apifluentresults.domain\\apifluentresults.domain.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,88 +50,140 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 1,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ApiFluentResult",
-              "DocumentMoniker": "C:\\Users\\ISP2\\Documents\\Mis archivos\\Mis proyectos\\packages-nuget\\ApiFluentResults\\ApiFluentResult\\ApiFluentResult.csproj",
-              "RelativeDocumentMoniker": "ApiFluentResult\\ApiFluentResult.csproj",
-              "ToolTip": "C:\\Users\\ISP2\\Documents\\Mis archivos\\Mis proyectos\\packages-nuget\\ApiFluentResults\\ApiFluentResult\\ApiFluentResult.csproj",
-              "RelativeToolTip": "ApiFluentResult\\ApiFluentResult.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-11-25T00:21:24.864Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ApiFluentResults.Domain",
-              "DocumentMoniker": "C:\\Users\\ISP2\\Documents\\Mis archivos\\Mis proyectos\\packages-nuget\\ApiFluentResults\\ApiFluentResults.Domain\\ApiFluentResults.Domain.csproj",
-              "RelativeDocumentMoniker": "ApiFluentResults.Domain\\ApiFluentResults.Domain.csproj",
-              "ToolTip": "C:\\Users\\ISP2\\Documents\\Mis archivos\\Mis proyectos\\packages-nuget\\ApiFluentResults\\ApiFluentResults.Domain\\ApiFluentResults.Domain.csproj",
-              "RelativeToolTip": "ApiFluentResults.Domain\\ApiFluentResults.Domain.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAA5AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-11-24T21:16:07.856Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "CustomProblemDetails.cs",
-              "DocumentMoniker": "C:\\Users\\ISP2\\Documents\\Mis archivos\\Mis proyectos\\packages-nuget\\ApiFluentResults\\ApiFluentResults.Domain\\DTOs\\CustomProblemDetails.cs",
-              "RelativeDocumentMoniker": "ApiFluentResults.Domain\\DTOs\\CustomProblemDetails.cs",
-              "ToolTip": "C:\\Users\\ISP2\\Documents\\Mis archivos\\Mis proyectos\\packages-nuget\\ApiFluentResults\\ApiFluentResults.Domain\\DTOs\\CustomProblemDetails.cs",
-              "RelativeToolTip": "ApiFluentResults.Domain\\DTOs\\CustomProblemDetails.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAA3wBAAAABFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-24T21:11:03.493Z",
+              "DocumentIndex": 0,
+              "Title": "ApiFluentResults.AspNetCore",
+              "DocumentMoniker": "C:\\Users\\ISP2\\Documents\\Mis archivos\\Mis proyectos\\packages-nuget\\ApiFluentResults\\ApiFluentResults.AspNetCore\\ApiFluentResults.AspNetCore.csproj",
+              "RelativeDocumentMoniker": "ApiFluentResults.AspNetCore\\ApiFluentResults.AspNetCore.csproj",
+              "ToolTip": "C:\\Users\\ISP2\\Documents\\Mis archivos\\Mis proyectos\\packages-nuget\\ApiFluentResults\\ApiFluentResults.AspNetCore\\ApiFluentResults.AspNetCore.csproj",
+              "RelativeToolTip": "ApiFluentResults.AspNetCore\\ApiFluentResults.AspNetCore.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-12-16T16:31:53.241Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 1,
+              "Title": "ResultMapper.cs",
+              "DocumentMoniker": "C:\\Users\\ISP2\\Documents\\Mis archivos\\Mis proyectos\\packages-nuget\\ApiFluentResults\\ApiFluentResults.AspNetCore\\Extensions\\ResultMapper.cs",
+              "RelativeDocumentMoniker": "ApiFluentResults.AspNetCore\\Extensions\\ResultMapper.cs",
+              "ToolTip": "C:\\Users\\ISP2\\Documents\\Mis archivos\\Mis proyectos\\packages-nuget\\ApiFluentResults\\ApiFluentResults.AspNetCore\\Extensions\\ResultMapper.cs",
+              "RelativeToolTip": "ApiFluentResults.AspNetCore\\Extensions\\ResultMapper.cs",
+              "ViewState": "AgIAAKsAAAAAAAAAAAAYwLAAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-16T16:17:16.474Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "UserService.cs",
               "DocumentMoniker": "C:\\Users\\ISP2\\Documents\\Mis archivos\\Mis proyectos\\packages-nuget\\ApiFluentResults\\ApiFluentResult.Services\\UserService.cs",
               "RelativeDocumentMoniker": "ApiFluentResult.Services\\UserService.cs",
               "ToolTip": "C:\\Users\\ISP2\\Documents\\Mis archivos\\Mis proyectos\\packages-nuget\\ApiFluentResults\\ApiFluentResult.Services\\UserService.cs",
               "RelativeToolTip": "ApiFluentResult.Services\\UserService.cs",
-              "ViewState": "AgIAABUAAAAAAAAAAAAYwBwAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABUAAAAAAAAAAAAYwB4AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-24T21:02:33.764Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "UsersController.cs",
-              "DocumentMoniker": "C:\\Users\\ISP2\\Documents\\Mis archivos\\Mis proyectos\\packages-nuget\\ApiFluentResults\\ApiFluentResult\\Controllers\\UsersController.cs",
-              "RelativeDocumentMoniker": "ApiFluentResult\\Controllers\\UsersController.cs",
-              "ToolTip": "C:\\Users\\ISP2\\Documents\\Mis archivos\\Mis proyectos\\packages-nuget\\ApiFluentResults\\ApiFluentResult\\Controllers\\UsersController.cs",
-              "RelativeToolTip": "ApiFluentResult\\Controllers\\UsersController.cs",
-              "ViewState": "AgIAABgAAAAAAAAAAAAYwAYAAAATAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-24T20:56:24.628Z",
+              "WhenOpened": "2025-11-25T15:46:55.874Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "UserEmailAlreadyExistsError.cs",
-              "DocumentMoniker": "C:\\Users\\ISP2\\Documents\\Mis archivos\\Mis proyectos\\packages-nuget\\ApiFluentResults\\ApiFluentResult.Services\\UserEmailAlreadyExistsError.cs",
-              "RelativeDocumentMoniker": "ApiFluentResult.Services\\UserEmailAlreadyExistsError.cs",
-              "ToolTip": "C:\\Users\\ISP2\\Documents\\Mis archivos\\Mis proyectos\\packages-nuget\\ApiFluentResults\\ApiFluentResult.Services\\UserEmailAlreadyExistsError.cs",
-              "RelativeToolTip": "ApiFluentResult.Services\\UserEmailAlreadyExistsError.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAJAAAAAAAAAA==",
+              "Title": "DependencyContainer.cs",
+              "DocumentMoniker": "C:\\Users\\ISP2\\Documents\\Mis archivos\\Mis proyectos\\packages-nuget\\ApiFluentResults\\ApiFluentResult.Services\\DependencyContainer.cs",
+              "RelativeDocumentMoniker": "ApiFluentResult.Services\\DependencyContainer.cs",
+              "ToolTip": "C:\\Users\\ISP2\\Documents\\Mis archivos\\Mis proyectos\\packages-nuget\\ApiFluentResults\\ApiFluentResult.Services\\DependencyContainer.cs",
+              "RelativeToolTip": "ApiFluentResult.Services\\DependencyContainer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAABAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-24T21:02:30.034Z",
+              "WhenOpened": "2025-11-25T15:46:54.885Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "UsersController.cs",
+              "DocumentMoniker": "C:\\Users\\ISP2\\Documents\\Mis archivos\\Mis proyectos\\packages-nuget\\ApiFluentResults\\ApiFluentResult\\Controllers\\UsersController.cs",
+              "RelativeDocumentMoniker": "ApiFluentResult\\Controllers\\UsersController.cs",
+              "ToolTip": "C:\\Users\\ISP2\\Documents\\Mis archivos\\Mis proyectos\\packages-nuget\\ApiFluentResults\\ApiFluentResult\\Controllers\\UsersController.cs",
+              "RelativeToolTip": "ApiFluentResult\\Controllers\\UsersController.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAoAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-25T15:44:45.445Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ForbiddenError.cs",
+              "DocumentMoniker": "C:\\Users\\ISP2\\Documents\\Mis archivos\\Mis proyectos\\packages-nuget\\ApiFluentResults\\ApiFluentResults.Domain\\Errors\\ForbiddenError.cs",
+              "RelativeDocumentMoniker": "ApiFluentResults.Domain\\Errors\\ForbiddenError.cs",
+              "ToolTip": "C:\\Users\\ISP2\\Documents\\Mis archivos\\Mis proyectos\\packages-nuget\\ApiFluentResults\\ApiFluentResults.Domain\\Errors\\ForbiddenError.cs",
+              "RelativeToolTip": "ApiFluentResults.Domain\\Errors\\ForbiddenError.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-25T15:41:56.322Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "DomainError.cs",
+              "DocumentMoniker": "C:\\Users\\ISP2\\Documents\\Mis archivos\\Mis proyectos\\packages-nuget\\ApiFluentResults\\ApiFluentResults.Domain\\Errors\\DomainError.cs",
+              "RelativeDocumentMoniker": "ApiFluentResults.Domain\\Errors\\DomainError.cs",
+              "ToolTip": "C:\\Users\\ISP2\\Documents\\Mis archivos\\Mis proyectos\\packages-nuget\\ApiFluentResults\\ApiFluentResults.Domain\\Errors\\DomainError.cs",
+              "RelativeToolTip": "ApiFluentResults.Domain\\Errors\\DomainError.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-25T15:41:40.967Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ConflictError.cs",
+              "DocumentMoniker": "C:\\Users\\ISP2\\Documents\\Mis archivos\\Mis proyectos\\packages-nuget\\ApiFluentResults\\ApiFluentResults.Domain\\Errors\\ConflictError.cs",
+              "RelativeDocumentMoniker": "ApiFluentResults.Domain\\Errors\\ConflictError.cs",
+              "ToolTip": "C:\\Users\\ISP2\\Documents\\Mis archivos\\Mis proyectos\\packages-nuget\\ApiFluentResults\\ApiFluentResults.Domain\\Errors\\ConflictError.cs",
+              "RelativeToolTip": "ApiFluentResults.Domain\\Errors\\ConflictError.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-25T15:41:35.519Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "CustomProblemDetails.cs",
+              "DocumentMoniker": "C:\\Users\\ISP2\\Documents\\Mis archivos\\Mis proyectos\\packages-nuget\\ApiFluentResults\\ApiFluentResults.Domain\\DTOs\\CustomProblemDetails.cs",
+              "RelativeDocumentMoniker": "ApiFluentResults.Domain\\DTOs\\CustomProblemDetails.cs",
+              "ToolTip": "C:\\Users\\ISP2\\Documents\\Mis archivos\\Mis proyectos\\packages-nuget\\ApiFluentResults\\ApiFluentResults.Domain\\DTOs\\CustomProblemDetails.cs",
+              "RelativeToolTip": "ApiFluentResults.Domain\\DTOs\\CustomProblemDetails.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-25T15:41:33.234Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ApiFluentResults.Domain.csproj",
+              "DocumentMoniker": "C:\\Users\\ISP2\\Documents\\Mis archivos\\Mis proyectos\\packages-nuget\\ApiFluentResults\\ApiFluentResults.Domain\\ApiFluentResults.Domain.csproj",
+              "RelativeDocumentMoniker": "ApiFluentResults.Domain\\ApiFluentResults.Domain.csproj",
+              "ToolTip": "C:\\Users\\ISP2\\Documents\\Mis archivos\\Mis proyectos\\packages-nuget\\ApiFluentResults\\ApiFluentResults.Domain\\ApiFluentResults.Domain.csproj",
+              "RelativeToolTip": "ApiFluentResults.Domain\\ApiFluentResults.Domain.csproj",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABQAAABCAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-11-24T21:16:07.856Z",
               "EditorCaption": ""
             }
           ]

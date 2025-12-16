@@ -185,6 +185,7 @@ namespace Osom.FluentRestult.API.Extensions
             )
             {
                 problemDetails.Errors = validationErrors;
+                problemDetails.Metadata = null;
             }
 
             return problemDetails;
