@@ -12,7 +12,7 @@ namespace LoadExcel.API.Test.Controllers
         public IActionResult Upload(IFormFile file)
         {
             List<UserModel> users = file.ImportExcel<UserModel>(configure =>
-                    configure.SheetName = "Users"
+                    configure.SheetName = "Productos"
                 )
                 .MapColumn(x => x.Name)
                 .MapColumn(x => x.Email)

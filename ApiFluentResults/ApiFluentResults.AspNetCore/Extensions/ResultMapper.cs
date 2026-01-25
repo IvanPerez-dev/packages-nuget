@@ -90,6 +90,9 @@ namespace Osom.FluentRestult.API.Extensions
         public ResultMapper<T> ForbiddenFor<TErr>()
             where TErr : Error => MapErrorToStatus<TErr>(403);
 
+        public ResultMapper<T> CustomErrorFor<TErr>(int statusCode)
+            where TErr : Error => MapErrorToStatus<TErr>(statusCode);
+
         private ResultMapper<T> MapErrorToStatus<TErr>(int statusCode)
             where TErr : Error
         {
