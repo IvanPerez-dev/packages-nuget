@@ -63,20 +63,33 @@ public class Excel
                 configure.SheetName = "Users";
             })
             .ToFile("C:\\Users\\ISP2\\Desktop\\users.xlsx");
+
+        var bytes = users
+            .ToExcel()
+            .WithTableStyle(configure =>
+            {
+                configure.Theme = ClosedXML.Excel.XLTableTheme.TableStyleMedium9;
+                configure.ShowRowStripes = true;
+                configure.HeaderFontColor = ClosedXML.Excel.XLColor.Black;
+                //configure.ShowTotalsRow = true;
+                configure.Title = "Report of Users";
+                configure.SheetName = "Users";
+            })
+            .ToBytes();
     }
 
     public void ExportToExcelWithCustomColumns()
     {
         users
             .ToExcel()
-            //.WithTableStyle(configure =>
-            //{
-            //    configure.Theme = ClosedXML.Excel.XLTableTheme.TableStyleMedium9;
-            //    configure.ShowRowStripes = true;
-            //    configure.HeaderFontColor = ClosedXML.Excel.XLColor.Black;
-            //    configure.Title = "Report of Users";
-            //    configure.SheetName = "Users";
-            //})
+            .WithTableStyle(configure =>
+            {
+                configure.Theme = ClosedXML.Excel.XLTableTheme.TableStyleMedium9;
+                configure.ShowRowStripes = true;
+                configure.HeaderFontColor = ClosedXML.Excel.XLColor.Black;
+                configure.Title = "Report of Users";
+                configure.SheetName = "Users";
+            })
             .WithColumn(x => x.Id, "Codigo")
             .WithColumn(x => x.Name + " " + x.Email, "Name")
             .WithColumn(x => x.DateOfBirth, "Fecha", "yyyy/MM/dd")

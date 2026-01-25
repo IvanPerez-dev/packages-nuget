@@ -1,14 +1,15 @@
 ﻿# ExcelFluently
 
-A NuGet package for automating field validation in ASP.NET Core API or MVC applications using **FluentValidation**. This package simplifies the validation process by automatically intercepting requests and validating them according to rules defined in FluentValidation validators. No manual validation code is required in each controller or action.
+ExcelFluently is a .NET library that allows you to import and export data from Excel files in a simple, fluid, and highly configurable way.
+Its syntax is designed to be simple and coherent, making it easy to create Excel reports and map data from files without the need for complex configuration.
+
 
 ## Features
+- Seamless Export: Generate Excel files from lists of objects with minimal or completely custom configuration.
+- Flexible Import: Map Excel data to .NET objects by column name, index, or custom alias.
+- Intuitive Configuration: Method chaining to adjust table styles, column names, date formats, and more.
+- ASP.NET Core Compatible: Direct support for working with IFormFiles in controllers.
 
-- **Automatic validation** of models and DTOs configured with **FluentValidation**
-- Eliminates repetitive validation code in each endpoint method
-- **Automatic error responses** in JSON format when validation fails
-- Easy configuration with single `AddRequestValidation` and `UseRequestValidation` methods
-- Compatible with **ASP.NET Core Web API** and **MVC**
 
 ## Installation
 
@@ -20,163 +21,269 @@ dotnet add package ExcelFluently
 
 ## The package will automatically install these required dependencies:
 
-- FluentValidation
-- FluentValidation.DependencyInjectionExtensions
-- Microsoft.AspNetCore.Http
-- Microsoft.AspNetCore.Mvc.Core
+- ClosedXML
+- Microsoft.AspNetCore.Http.Features
 
 # Quick Start
 
-### 1. Configure Services (Program.cs)
+In this section, you'll find different ways to use ExcelFluently, both for exporting and importing data.
+
+## Export data to Excel
+
+### 1. Simple export (no configuration)
+ Generates an Excel file automatically using the object's property names as columns:
 
 ```csharp
-var builder = WebApplication.CreateBuilder(args);
+using ExcelFluently;
 
-builder.Services.AddControllers();
-
-// Register RequestValidation (automatically finds all validators)
-builder.Services.AddRequestValidation();
-
-var app = builder.Build();
-
-```
-
-### 2. Configure Middleware (Program.cs)
-
-```csharp
-
-// Configure the HTTP request pipeline ! important
-app.UseRouting();
-
-// Use RequestValidation middleware
-app.UseRequestValidation();
-
-app.UseAuthorization();
-app.MapControllers();
-app.Run();
-
-```
-
-# Usage Example
-
-### 1. Create a DTO
-
-```csharp
-
-public class CreateUserDto
-{
-    public string Name { get; set; }
-    public int Age { get; set; }
-    public string Email { get; set; }
-}
-```
-
-### 2. Create a Validator
-
-This package extends **FluentValidation**. To learn how to create validators, check the official documentation:
-
-- 📚 [FluentValidation Official Documentation](https://docs.fluentvalidation.net/en/latest/index.html)
-- 🎯 [Getting Started Guide](https://docs.fluentvalidation.net/en/latest/start.html)
-- 🛠️ [Custom Validators](https://docs.fluentvalidation.net/en/latest/custom-validators.html)
-
-
-```csharp
-public class CreateUserValidator : AbstractValidator<CreateUserDto>
-{
-    public CreateUserValidator()
+    public void ExportToExcel()
     {
-        RuleFor(x => x.Name)
-            .NotEmpty().WithMessage("Name is required.")
-            .MaximumLength(50).WithMessage("Name cannot exceed 50 characters.");
-
-        RuleFor(x => x.Age)
-            .GreaterThan(0).WithMessage("Age must be greater than 0.")
-            .InclusiveBetween(18, 99).WithMessage("Age must be between 18 and 99.");
-
-        RuleFor(x => x.Email)
-            .NotEmpty().WithMessage("Email is required.")
-            .EmailAddress().WithMessage("A valid email address is required.");
+        var users = _userRepository.GetAll();
+        users.ToExcel().ToFile("C:\\Users\\Directory\\Desktop\\users.xlsx");
     }
-}
+
 ```
 
-### 3. Create a Controller
+### 2. Export with table style
+Add a theme, colors, and row stripes:
 
 ```csharp
 
-[ApiController]
-[Route("api/[controller]")]
-public class UsersController : ControllerBase
-{
-    [HttpPost]
-    public IActionResult CreateUser([FromBody] CreateUserDto userDto)
+    public void ExportToExcel()
     {
-        // No manual validation needed - automatically validated by middleware
-        return Ok(new { Message = "User created successfully", User = userDto });
+        var users = _userRepository.GetAll();
+        users.ToExcel()
+            .WithTableStyle(configure =>
+            {
+                configure.Theme = ClosedXML.Excel.XLTableTheme.TableStyleMedium9;
+                configure.ShowRowStripes = true;
+                configure.HeaderFontColor = ClosedXML.Excel.XLColor.Black;
+            })
+            .ToFile("C:\\Users\\ISP2\\Desktop\\users.xlsx");
     }
-}
+
 ```
 
-## Automatic Validation Response
+### 3. Custom Columns
 
-When validation fails, the middleware returns a structured JSON response:
+Rename columns or combine multiple properties into one:
 
-```json
-{
-  "title": "Validation errors occurred",
-  "status": 400,
-  "detail": "Please correct the specified errors and try again.",
-  "instance": "/api/users",
-  "type": "https://tools.ietf.org/html/rfc7231#section-6.5.1",
-  "errors": {
-    "Name": ["Name is required."],
-    "Age": ["Age must be greater than 0.", "Age must be between 18 and 99."],
-    "Email": ["A valid email address is required."]
-  }
-}
+```csharp
+    public void ExportToExcel()
+    {
+     var users = _userRepository.GetAll();
+     users.ToExcel()
+            .WithTableStyle(configure =>
+            {
+                configure.Theme = ClosedXML.Excel.XLTableTheme.TableStyleMedium9;
+                configure.ShowRowStripes = true;
+                configure.HeaderFontColor = ClosedXML.Excel.XLColor.Black;
+            })
+            .WithColumn(x => x.Id, "Codigo")
+            .WithColumn(x => x.Name + " " + x.Email, "Name")
+            .WithColumn(x => x.DateOfBirth, "Fecha")
+            .ToFile("C:\\Users\\ISP2\\Desktop\\users.xlsx");
+    }
+```
+### 4. Date format
+Applies a specific format to DateTime properties:
+
+```csharp
+    public void ExportToExcel()
+    {
+        var users = _userRepository.GetAll();
+         users.ToExcel()
+                .WithTableStyle(configure =>
+                {
+                    configure.Theme = ClosedXML.Excel.XLTableTheme.TableStyleMedium9;
+                    configure.ShowRowStripes = true;
+                    configure.HeaderFontColor = ClosedXML.Excel.XLColor.Black;
+                })
+                .WithColumn(x => x.Id, "Codigo")
+                .WithColumn(x => x.Name + " " + x.Email, "Name")
+                .WithColumn(x => x.DateOfBirth, "Fecha","yyyy/MM/dd")
+                .ToFile("C:\\Users\\ISP2\\Desktop\\users.xlsx");
+    }
+```
+### 5. Other configurations available
+
+You can configure:
+
+- Theme: Table theme (XLTableTheme)
+- ShowRowStripes: Alternating rows
+- HeaderFontColor: Header color
+- ShowTotalsRow: Totals row
+- Title: Report title
+- SheetName: Sheet name
+
+```csharp
+    public void ExportToExcel()
+    {
+         var users = _userRepository.GetAll();
+         users.ToExcel()
+                .WithTableStyle(configure =>
+                {
+                    configure.Theme = ClosedXML.Excel.XLTableTheme.TableStyleMedium9;
+                    configure.ShowRowStripes = true;
+                    configure.HeaderFontColor = ClosedXML.Excel.XLColor.Black;
+                    configure.ShowTotalsRow = true;
+                    configure.Title = "Report of Users";
+                    configure.SheetName = "Users";
+                })....
+
+    }
 ```
 
-# Supported HTTP Methods
+### Export as bytes
+Useful for sending the file in an API:
 
-The middleware automatically validates these HTTP methods:
+```csharp
+    ... 
+    var bytes =  users.ToExcel().ToBytes();
+    ...
+```
 
-- POST
-- PUT
-- PATCH
+
+## Import data from Excel to Objects
+
+### 1. Simple import (by column name)
+ The Excel file must have the same columns as the object properties:
+
+``` csharp
+    public List<User> MapusersFromExcelByNameColumn()
+    {
+         using var steam = File.OpenRead("C:\\Users\\Directory\\Desktop\\import users.xlsx");
+            var users = steam
+                .ImportExcel<User>(configure =>
+                {
+                    configure.SheetName = "Users";
+                })
+                .MapColumn(x => x.Name)
+                .MapColumn(x => x.Email)
+                .MapColumn(x => x.DateOfBirth)
+                .MapColumn(x => x.Age)
+                .MapColumn(x => x.Salary)
+                .ToList();
+
+            return users;
+        }
+   }
+```
+
+### 2. Import data from Excel with custom columns
+ We can map the columns of the Excel file to the properties of the object
+
+``` csharp
+    public List<User> MapusersFromExcelByCustomColumn()
+    {
+         using var steam = File.OpenRead("C:\\Users\\Directory\\Desktop\\import users.xlsx");
+            var users = steam
+                .ImportExcel<User>(configure =>
+                {
+                    configure.SheetName = "Users";
+                })
+                .MapColumn(x => x.Name, "Full Name")
+                .MapColumn(x => x.Email, "Email Address")
+                .MapColumn(x => x.DateOfBirth, "DOB")
+                .MapColumn(x => x.Age, "Age")
+                .MapColumn(x => x.Salary, "Salary")
+                .ToList();
+            return users;
+        }
+   }
+```
+
+### 3. Import with date format
+ Defines the expected format for dates:
+
+ ``` csharp
+    public List<User> MapusersFromExcelByCustomColumn()
+    {
+         using var steam = File.OpenRead("C:\\Users\\Directory\\Desktop\\import users.xlsx");
+            var users = steam
+                .ImportExcel<User>(configure =>
+                {
+                    configure.SheetName = "Users";
+                    configure.DateFormat = "M/d/yyyy";
+                })
+                .MapColumn(x => x.Name, "Full Name")
+                .MapColumn(x => x.Email, "Email Address")
+                .MapColumn(x => x.DateOfBirth, "DOB")
+                .MapColumn(x => x.Age, "Age")
+                .MapColumn(x => x.Salary, "Salary")
+                .ToList();
+            return users;
+        }
+   }
+```
+
+### 4. Import by column index
+ When there are no headers in the file:
+
+``` csharp
+    public List<User> MapusersFromExcelByIndexColumn()
+    {
+         using var steam = File.OpenRead("C:\\Users\\Directory\\Desktop\\import users.xlsx");
+            var users = steam
+                .ImportExcel<User>(configure =>
+                {
+                    configure.SheetName = "Users";
+                })
+                .MapColumn(x => x.Name, 0)
+                .MapColumn(x => x.Email, 1)
+                .MapColumn(x => x.DateOfBirth, 2)
+                .MapColumn(x => x.Age, 3)
+                .MapColumn(x => x.Salary, 4)
+                .ToList();
+            return users;
+        }
+   }
+```
+
+### 5. Use in ASP.NET Core
+Import data directly from an uploaded file:
+
+``` csharp
+    [HttpPost("import")]
+    public IActionResult ImportUsers(IFormFile file)
+    {
+        if (file == null || file.Length == 0)
+            return BadRequest("No file uploaded.");
+
+        var users = file
+            .ImportExcel<User>(configure =>
+            {
+                configure.SheetName = "Users";
+            })
+            .MapColumn(x => x.Name, "Full Name")
+            .MapColumn(x => x.Email, "Email Address")
+            .MapColumn(x => x.DateOfBirth, "DOB")
+            .MapColumn(x => x.Age, "Age")
+            .MapColumn(x => x.Salary, "Salary")
+            .ToList();
+        // Process the imported users as needed
+        return Ok(users);
+    }
+```
 
 # Benefits
 
-- Automation: No manual ModelState checks in controllers
-- Clean Code: Eliminates repetitive validation code
-- Consistency: Standardized validation responses across all endpoints
-- Scalability: Easily add new validations by creating new validators
-- Multi-assembly Support: Automatically discovers validators across all - - - referenced projects
+- Fluent and readable syntax.
+- Minimal configuration for simple cases.
+- Highly customizable for complex scenarios.
+- Ideal for reports, data migrations, and APIs.
 
 # Dependencies
 
 - This package automatically includes:
-- FluentValidation (≥11.9.0)
-- FluentValidation.DependencyInjectionExtensions (≥11.9.0)
-- Microsoft.AspNetCore.App (shared framework)
-- Microsoft.Extensions.DependencyInjection (≥8.0.0)
+- ClosedXML (0.105.0)
+- Microsoft.AspNetCore.Http.Features (5.0.17)
 
-# Troubleshooting
-
-- Validators Not Found
-- Ensure your validators are in assemblies that are loaded at runtime.
-- The middleware automatically scans all available assemblies.
-
-# Validation Not Triggering
-
-- Ensure DTOs are decorated with [FromBody] attribute
-- Check that HTTP method is POST, PUT, or PATCH
-- Verify validators are properly registered
 
 # License
-
-MIT License - see LICENSE file for details.
+MIT License
 
 # Support
 
-- GitHub: [https://github.com/Ivanproyectos](https://github.com/ivperez/ExcelFluently)
-- LinkedIn: [https://www.linkedin.com/in/ivan-perez-tintaya/](https://www.linkedin.com/in/ivanproyectos/)
+- GitHub: [https://github.com/IvanPerez-dev](https://github.com/IvanPerez-dev)
+- LinkedIn: [https://www.linkedin.com/in/ivan-perez-tintaya/](https://www.linkedin.com/in/ivan-perez-tintaya/)

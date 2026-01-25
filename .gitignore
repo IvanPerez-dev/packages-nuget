@@ -53,6 +53,24 @@ CodeCoverage/
 TestResult.xml
 nunit-*.xml
 
+<<<<<<< HEAD
 **/bin/
 **/obj/
 **/.vs/
+=======
+bin/
+obj/
+out/
+dist/
+build/
+coverage/
+
+.vs/
+.vscode/
+.idea/
+*.suo
+.vs
+
+**/obj/
+**/bin/
+>>>>>>> 92b0ff2a56bee1eab6e8bef65c9bf2e33c549144
