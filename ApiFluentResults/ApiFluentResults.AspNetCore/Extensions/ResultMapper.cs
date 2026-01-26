@@ -127,16 +127,9 @@ namespace Osom.FluentRestult.API.Extensions
         private IActionResult CreateStatusCodeResult(Error error, int statusCode)
         {
             var problemDetails = Problem(error, statusCode);
-
-            return statusCode switch
-            {
-                400 => _controller.BadRequest(problemDetails),
-                401 => _controller.Unauthorized(problemDetails),
-                404 => _controller.NotFound(problemDetails),
-                409 => _controller.Conflict(problemDetails),
-                422 => _controller.UnprocessableEntity(problemDetails),
-                _ => _controller.StatusCode(statusCode, problemDetails),
-            };
+            var result = new ObjectResult(problemDetails) { StatusCode = statusCode };
+            result.ContentTypes.Add("application/problem+json");
+            return result;
         }
 
         public IActionResult Build()
