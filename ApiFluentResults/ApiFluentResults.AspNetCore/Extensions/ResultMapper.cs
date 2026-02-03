@@ -22,54 +22,72 @@ namespace Osom.FluentRestult.API.Extensions
             ConfigureDefaultErrorMapper();
         }
 
-        public ResultMapper<T> OkEmpty()
+        public IActionResult OkEmpty()
         {
             _successFactory = () => _controller.Ok();
-            return this;
+            return Build();
         }
 
         /// <summary>
         /// Configura 200 OK devolviendo result.Value tal cual (sin modificaciones).
         /// Úsalo cuando el DTO ya viene listo de Application.
         /// </summary>
-        public ResultMapper<T> Ok() // si no pasas nada → usa result.Value
+        public IActionResult Ok() // si no pasas nada → usa result.Value
         {
             _successFactory = () =>
                 _result.Value is null ? _controller.Ok() : _controller.Ok(_result.Value);
-            return this;
+            return Build();
         }
 
         /// <summary>
         /// Configura 201 Created devolviendo result.Value y Location header automática basada en Id.
         /// Tambien puedes pasar un uri personalizado.
         /// </summary>
-        public ResultMapper<T> Created(string? uri = null)
+        public IActionResult Created(string? uri = null)
         {
             string location = uri ?? BuildLocationUri();
             _successFactory = () => _controller.Created(location, _result.Value);
-            return this;
+            return Build();
         }
 
-        public ResultMapper<T> CreatedAtAction(string actionName, object? routeValues = null)
+        /// <summary>
+        /// Configura 201 Created devolviendo result.Value y Location header automática basada en Id.
+        /// Tambien puedes pasar un uri personalizado.
+        /// </summary>
+        public IActionResult CreatedAtAction(string actionName, object? routeValues = null)
         {
             _successFactory = () =>
                 _controller.CreatedAtAction(actionName, routeValues, _result.Value);
-            return this;
+            return Build();
         }
 
-        public ResultMapper<T> NoContent()
+        /// <summary>
+        /// Configura 204 NoContent
+        /// </summary>
+        public IActionResult NoContent()
         {
             _successFactory = () => _controller.NoContent();
-            return this;
+            return Build();
         }
 
-        public ResultMapper<T> Accepted(string? uri = null, T? value = default)
+        /// <summary>
+        /// Configura 202 Accepted devolviendo result.Value
+        /// </summary>
+        /// <param name="uri">Uri personalizada para Location header</param>
+        /// <param name="value">Result.Value</param>
+        public IActionResult Accepted(string? uri = null, T? value = default)
         {
             var body = value ?? _result.ValueOrDefault;
             _successFactory = uri is null
                 ? () => _controller.Accepted(body)
                 : () => _controller.Accepted(uri, body);
-            return this;
+            return Build();
+        }
+
+        public IActionResult Status(int statusCode)
+        {
+            _successFactory = () => _controller.StatusCode(statusCode, _result.ValueOrDefault);
+            return Build();
         }
 
         public ResultMapper<T> ConflictFor<TErr>()
@@ -132,7 +150,7 @@ namespace Osom.FluentRestult.API.Extensions
             return result;
         }
 
-        public IActionResult Build()
+        private IActionResult Build()
         {
             if (_result.IsSuccess)
             {
@@ -158,7 +176,7 @@ namespace Osom.FluentRestult.API.Extensions
             var errorTypeInfo = ErrorConfiguration.GetErrorInfo(status);
 
             string errorCode = "UNKNOWN_ERROR";
-            if (error is DomainError domainError)
+            if (error is BaseFluentError domainError)
             {
                 errorCode = domainError.ErrorCode;
             }

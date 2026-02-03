@@ -1,6 +1,6 @@
 ﻿namespace ApiFluentResults.Domain.Errors
 {
-    public sealed class ForbiddenError : DomainError
+    public sealed class ForbiddenError : BaseFluentError
     {
         public ForbiddenError(string message)
             : base(message, "FORBIDDEN")

@@ -1,11 +1,8 @@
 ﻿namespace ApiFluentResults.Domain.Errors
 {
-    public sealed class UnauthorizedError : DomainError
+    public sealed class UnauthorizedError : BaseFluentError
     {
         public UnauthorizedError(string message)
-            : base(message, "UNAUTHORIZED")
-        {
-            //Metadata.Add(MetadataKeys.ErrorCode, );
-        }
+            : base(message, "UNAUTHORIZED") { }
     }
 }

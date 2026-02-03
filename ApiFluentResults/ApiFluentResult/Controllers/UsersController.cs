@@ -19,21 +19,21 @@ namespace ApiFluentResult.Controllers
         public async Task<IActionResult> GetById(int id)
         {
             var result = await _userService.Get(id);
-            return MapResult(result).Ok().Build();
+            return MapResult(result).Ok();
         }
 
         [HttpGet()]
         public async Task<IActionResult> GetAll()
         {
             var result = await _userService.GetAll();
-            return MapResult(result).Ok().Build();
+            return MapResult(result).Ok();
         }
 
         [HttpPost]
         public async Task<IActionResult> Create([FromBody] User user)
         {
             var result = await _userService.Create(user);
-            return MapResult(result).Created().ConflictFor<UserEmailAlreadyExistsError>().Build();
+            return MapResult(result).ConflictFor<UserEmailAlreadyExistsError>().Created();
         }
     }
 }

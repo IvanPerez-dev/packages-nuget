@@ -74,9 +74,8 @@ Public class OrdersController : FluentResultController
         var result = await Mediator.Send(command);
 
         return MapResult(result)
-            .Ok()
             .ConflictFor<OrderAlreadyPaidError>()
-            .Build();
+            .Ok();
     }
 }
 
@@ -94,14 +93,14 @@ Ok()
 .CreatedAtAction()
 .NoContent()
 .Accepted()
+.Status(StatusCode...)
 ```
 
 Example:
 
 ```csharp
 return MapResult(result)
-    .Created()
-    .Build();
+    .Created();
 ```
 
 # Default Error Mappings
@@ -121,10 +120,10 @@ The following error types are mapped automatically:
 
 ## Custom Domain Errors
 
-You can define your own business errors by inheriting from `DomainError`:
+You can define your own business errors by inheriting from `BaseFluentError`:
 
 ```csharp
-public class OrderAlreadyPaidError : DomainError
+public class OrderAlreadyPaidError : BaseFluentError
 {
     public OrderAlreadyPaidError(string orderNumber)
         : base(
@@ -140,18 +139,16 @@ Then map the error to an HTTP status code in the controller:
 
 ```csharp
 return MapResult(result)
-    .Ok()
     .ConflictFor<OrderAlreadyPaidError>()
-    .Build();
+    .Ok();
 ```
 
 ## Custom Status Code Mapping
 If there is no predefined method for the HTTP status you need, you can use CustomErrorFor:
 ```csharp
 return MapResult(result)
-    .Ok()
     .CustomErrorFor<OrderAlreadyPaidError>(418)
-    .Build();
+    .Ok();
 ```
 This allows full control over the returned HTTP status code.    
 

@@ -10,7 +10,7 @@
     <Title>Domain Error Types for Clean Architecture with FluentResults</Title>
     <Description>Provides common domain error types (NotFound, Conflict, Validation, Unauthorized, Forbidden) for DDD and Clean Architecture projects using FluentResults. Lightweight package with no ASP.NET dependencies - perfect for your domain layer.</Description>
     <Authors>Ivan Perez</Authors>
-    <Version>1.0.0</Version>
+    <Version>1.1.0</Version>
     <!-- INFORMACIÓN DEL REPOSITORIO -->
     <RepositoryUrl>https://github.com/Ivanproyectos/packages-nuget.git</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
@@ -23,7 +23,7 @@
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageReleaseNotes>
-		- Classes for common domain error types using FluentResults
+		- Add BaseFluentError class for custom domain errors.
 	</PackageReleaseNotes>
   </PropertyGroup>
   <ItemGroup>
