@@ -20,7 +20,8 @@ This package is intended to be referenced from **core layers** in Clean Architec
 - `ValidationError`
 - `UnauthorizedError`
 - `ForbiddenError`
-- `DomainError` (base class for business errors)
+- `DomainError` 
+- `BaseFluentError` (base class for all errors)
 
 ```bash
 dotnet add package ApiFluentResults.Domain
@@ -118,9 +119,45 @@ The following error types are mapped automatically:
 
 ---
 
-## Custom Domain Errors
+## Business Rule Validation
 
-You can define your own business errors by inheriting from `BaseFluentError`:
+You can return multiple validation errors using `DomainError` or your custom error:
+```csharp
+       public static Result<Order> Create(
+                int branchId,
+                int orderTypeId,
+                string currencyCode,
+                string orderNumber,
+                CustomerSnapshot customerSnapshot,
+                long? customerId,
+                decimal? descountAmount = 0,
+                long? tableSessionId = null
+            )
+            {
+                if (branchId is 0)
+                    return Result.Fail(new DomainError("Branch is required"));
+
+                if (orderTypeId is 0)
+                    return Result.Fail(new DomainError("Type order is required"));
+                  .....
+
+                return new Order(
+                    branchId,
+                    orderTypeId,
+                    currencyCode,
+                    orderNumber,
+                    customerSnapshot,
+                    customerId,
+                    descountAmount,
+                    tableSessionId
+                );
+            }
+```
+
+## Custom Errors
+
+You can define your own business errors by inheriting from `BaseFluentError`, It is not necessary to map the error code, 
+as by default the status code will be 422 (Unprocessable Entity).:
 
 ```csharp
 public class OrderAlreadyPaidError : BaseFluentError
@@ -135,7 +172,8 @@ public class OrderAlreadyPaidError : BaseFluentError
     }
 }
 ```
-Then map the error to an HTTP status code in the controller:
+
+If you want a different type of error, assign the error to an HTTP status code in the controller:
 
 ```csharp
 return MapResult(result)

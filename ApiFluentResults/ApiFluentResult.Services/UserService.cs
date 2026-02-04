@@ -29,6 +29,10 @@ namespace ApiFluentResult.Services
 
         public async Task<Result<User>> Create(User user)
         {
+            var userToCreate = User.Create(user.Id, user.Name, user.Email);
+            if (userToCreate.IsFailed)
+                return userToCreate.ToResult<User>();
+
             var userExists = _users.FirstOrDefault(u => u.Email == user.Email);
             if (userExists is not null)
             {

@@ -33,7 +33,10 @@ namespace ApiFluentResult.Controllers
         public async Task<IActionResult> Create([FromBody] User user)
         {
             var result = await _userService.Create(user);
-            return MapResult(result).ConflictFor<UserEmailAlreadyExistsError>().Created();
+            return MapResult(result)
+                .ConflictFor<UserEmailAlreadyExistsError>()
+                .BadRequestFor<MaximumLengthInvalidError>()
+                .Created();
         }
     }
 }

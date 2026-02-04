@@ -1,6 +1,4 @@
-﻿using FluentResults;
-
-namespace ApiFluentResults.Domain.Errors
+﻿namespace ApiFluentResults.Domain.Errors
 {
     public class DomainError : BaseFluentError
     {

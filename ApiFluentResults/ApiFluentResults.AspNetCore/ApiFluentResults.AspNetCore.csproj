@@ -12,7 +12,7 @@
 		Map responses in the controller receiving the Resolvet type from FluentResults in ASP.NET Core
 	</Description>
     <Authors>Ivan Perez</Authors>
-    <Version>2.0.0</Version>
+    <Version>2.0.1</Version>
     <!-- INFORMACIÓN DEL REPOSITORIO -->
     <RepositoryUrl>https://github.com/Ivanproyectos/packages-nuget.git</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
@@ -25,10 +25,7 @@
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageReleaseNotes>
-		- Removed the Build() method from ResultMapper.
-		- Success response methods (Ok, Created, NoContent, Accepted, Status, etc.)
-		are now terminal and return IActionResult directly.
-		- Result configuration must now always end with a response method.
+		- update readme
 	</PackageReleaseNotes>
   </PropertyGroup>
   <ItemGroup>
