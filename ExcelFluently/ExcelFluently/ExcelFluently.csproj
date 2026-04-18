@@ -1,11 +1,12 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFramework>net9.0</TargetFramework>
+    <TargetFrameworks>netstandard2.0;netstandard2.1;net6.0;net8.0;net9.0;net10.0</TargetFrameworks>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <LangVersion>latest</LangVersion>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <Title>Excel Fluent - Easy Excel Export/Import</Title>
-    <Version>1.0.0</Version>
+    <Version>1.1.0</Version>
     <!-- INFORMACIÓN DEL REPOSITORIO -->
     <RepositoryUrl>https://github.com/IvanPerez-dev/packages-nuget.git</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
@@ -18,13 +19,31 @@
     <!-- LICENCIA -->
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageReadmeFile>README.md</PackageReadmeFile>
-    <PackageReleaseNotes>First release: Fluent Excel export with configurable styles, import with column mapping, date format handling.</PackageReleaseNotes>
+    <PackageReleaseNotes>
+		v1.1.0
+		- Added multi-targeting support: netstandard2.0, netstandard2.1, net6.0, net8.0, net9.0
+		- Removed unconditional dependency on Microsoft.AspNetCore.Http.Features; now conditionally included only for net6.0 and above via compile-time directives (#if NET6_0_OR_GREATER)
+		- Fixed critical bug in WithColumn: inverted null-check condition caused all custom column configurations to throw ArgumentException
+		- Fixed UnaryExpression handling in WithColumn: value types (int, decimal, DateTime) were silently returning null due to implicit boxing; now correctly unwrapped from Convert expression
+		- Fixed NullReferenceException in ExcelImporterService constructor when configure parameter was not provided (null-safe invoke with ?.Invoke)
+		- Fixed incorrect date format default in ImporterSettings: "yyyy/mm/dd" (minutes) corrected to "yyyy/MM/dd" (months)
+		- Fixed missing stream Position reset in IFormFile extension (CopyTo was leaving stream at end)
+		- Added LangVersion latest to csproj to allow modern C# syntax across all target frameworks
+	</PackageReleaseNotes>
   </PropertyGroup>
   <ItemGroup>
     <None Include="README.md" Pack="true" PackagePath="\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="ClosedXML" Version="0.105.0" />
+  </ItemGroup>
+  <ItemGroup
+    Condition="'$(TargetFramework)' == 'net6.0'
+                      or '$(TargetFramework)' == 'net8.0'
+                      or '$(TargetFramework)' == 'net9.0'
+					  or '$(TargetFramework)' == 'net10.0'
+					  "
+  >
     <PackageReference Include="Microsoft.AspNetCore.Http.Features" Version="5.0.17" />
   </ItemGroup>
 </Project>

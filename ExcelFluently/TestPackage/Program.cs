@@ -91,9 +91,9 @@ public class Excel
                 configure.SheetName = "Users";
             })
             .WithColumn(x => x.Id, "Codigo")
-            .WithColumn(x => x.Name + " " + x.Email, "Name")
+            .WithColumn(x => x.Name + " " + x.Email)
             .WithColumn(x => x.DateOfBirth, "Fecha", "yyyy/MM/dd")
-            .ToFile("C:\\Users\\ISP2\\Desktop\\users.xlsx");
+            .ToFile("C:\\Users\\ivans\\OneDrive\\Desktop\\users.xlsx");
     }
 
     public List<User> MapusersFromExcelByNameColumn()

@@ -1,9 +1,7 @@
-﻿using System.ComponentModel.DataAnnotations;
-using System.Globalization;
+﻿using System.Globalization;
 using System.Linq.Expressions;
 using System.Reflection;
 using ClosedXML.Excel;
-using DocumentFormat.OpenXml.Presentation;
 using ExcelFluently.Models;
 using ExcelFluently.Settings;
 
@@ -19,7 +17,7 @@ namespace ExcelFluently.Services
 
         public ExcelImporterService(Stream stream, Action<ImporterSettings> configure = null)
         {
-            configure(_settings);
+            configure?.Invoke(_settings);
             _excelStream = stream;
         }
 

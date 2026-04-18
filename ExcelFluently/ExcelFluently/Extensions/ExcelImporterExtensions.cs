@@ -1,6 +1,5 @@
 ﻿using ExcelFluently.Services;
 using ExcelFluently.Settings;
-using Microsoft.AspNetCore.Http;
 
 namespace ExcelFluently.Extensions
 {
@@ -24,8 +23,9 @@ namespace ExcelFluently.Extensions
             return new ExcelImporterService<T>(new MemoryStream(bytes), configure);
         }
 
+#if NET6_0_OR_GREATER
         public static ExcelImporterService<T> ImportExcel<T>(
-            this IFormFile file,
+            this Microsoft.AspNetCore.Http.IFormFile file,
             Action<ImporterSettings> configure = null
         )
             where T : new()
@@ -35,5 +35,6 @@ namespace ExcelFluently.Extensions
 
             return new ExcelImporterService<T>(stream, configure);
         }
+#endif
     }
 }

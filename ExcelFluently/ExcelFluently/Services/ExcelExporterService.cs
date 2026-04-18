@@ -1,7 +1,6 @@
 ﻿using System.Linq.Expressions;
 using System.Reflection;
 using ClosedXML.Excel;
-using DocumentFormat.OpenXml.Spreadsheet;
 using ExcelFluently.Models;
 using ExcelFluently.Settings;
 
@@ -27,13 +26,18 @@ namespace ExcelFluently.Services
         )
         {
             _useAutoColumns = false;
-            var member = expression.Body as MemberExpression;
-            if (member != null)
-            {
-                throw new ArgumentException("Member expression is not supported");
-            }
+            var member =
+                expression.Body as MemberExpression
+                ?? (expression.Body as UnaryExpression)?.Operand as MemberExpression;
 
-            var propertyName = member?.Member.Name;
+            //if (member == null && string.IsNullOrEmpty(columnName))
+            //{
+            //    throw new ArgumentException(
+            //        "The column name was not provided and the member name could not be obtained"
+            //    );
+            //}
+
+            var propertyName = member?.Member.Name ?? "Unknown";
             var compileExpression = expression.Compile();
 
             _columns.Add(
